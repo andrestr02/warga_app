@@ -40,4 +40,11 @@ class DatabaseHelper {
       )
     ''');
   }
+
+  // Metode addWarga
+  Future<void> addWarga(Map<String, dynamic> warga) async {
+    final db = await database;
+    await db.insert('data_warga', warga);
+  } //addWarga
+  
 }
